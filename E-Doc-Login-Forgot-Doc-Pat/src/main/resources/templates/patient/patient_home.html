@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" 
+th:replace="base::layout(~{::section})">
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Insert title here</title>
+</head>
+<body>
+	<section>
+		<h3>Patient After Login: Home Page</h3>
+		<h3>Patient Name : [[${patient.patientName}]]</h3>
+		<h3>Patient Name : [[${patient.address}]]</h3>
+		<h3>Patient Mobile Number : [[${patient.mobileNumber}]]</h3>
+		<h3>Patient Email : [[${patient.patientEmail}]]</h3>
+		<!--<form th:action="@{/patient/logout}" method="post">
+            <input type="submit" value="Logout" />
+        </form>-->
+	</section>
+</body>
+</html>

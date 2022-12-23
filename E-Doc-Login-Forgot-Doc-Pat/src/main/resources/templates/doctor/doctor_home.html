@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+
+<head>
+	<meta charset="ISO-8859-1">
+	<title>Doctor Home Page</title>
+</head>
+
+<body>
+	<section>
+		<h3>Doctor After Login: Home Page</h3>
+		<h3>Doctor Name : [[${doctor.doctorName}]]</h3>
+		<h3>Doctor qualification : [[${doctor.qualification}]]</h3>
+		<h3>Doctor experience : [[${doctor.experience}]]</h3>
+		<h3>Doctor specialization : [[${doctor.specialization}]]</h3>
+		<h3>Doctor Email : [[${doctor.doctorEmail}]]</h3>
+		<!--<form th:action="@{/doctor/logout}" method="post">
+			<input type="submit" value="Logout" />
+		</form>-->
+	</section>
+</body>
+
+</html>

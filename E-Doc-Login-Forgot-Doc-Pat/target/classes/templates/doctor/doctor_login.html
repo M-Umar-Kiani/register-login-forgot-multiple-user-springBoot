@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" th:replace="base::layout(~{::section})">
+
+<head>
+	<title>Base Page</title>
+	<meta charset="ISO-8859-1">
+	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+		integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+</head>
+
+<body>
+	<section>
+		<div class="container p-5">
+			<div class="row">
+				<div class="col-md-6 offset-md-3">
+					<div class="card">
+						<div class="card-header text-center fs-4">Doctor Login Page</div>
+						<div th:if="${param.error}" class="alert alert-danger">
+							Invalid username & Password</div>
+						<div th:if="${param.logout}" class="alert alert-success">
+							Logout Sucessfully</div>
+						<div class="card-body">
+							<form th:action="@{/doctor/login}" method="post">
+								<div class="mb-3">
+									<label>Enter Email</label> 
+									<input type="email" name="email" class="form-control">
+								</div>
+								<div class="mb-3">
+									<label>Enter Password</label> 
+									<input type="text" name="password" class="form-control">
+								</div>
+								<button class="btn btn-primary col-md-12">Login</button>
+							</form>
+							<div class="text-center mt-2">
+								<a th:href="@{/forgot-doctor}" class="text-decoration-none fs-5">Forgot Password</a>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+		crossorigin="anonymous"></script>
+</body>
+
+</html>
